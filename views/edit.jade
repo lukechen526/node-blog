@@ -1,0 +1,12 @@
+form(action='', method='post')
+  -if(method != 'post')
+   input(type='hidden', name='_method', value=method) 
+
+  label(for='title') Title:
+    input(type='text', name='title',id='title', value=title)
+  
+  label(for='body') Body:
+    textarea(name='body', id='body')!=body
+
+  input(type='Submit', value='Submit')
+  
