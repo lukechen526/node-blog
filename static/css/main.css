@@ -1,0 +1,82 @@
+#blog-title
+{
+    font-size:xx-large;
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;   
+
+}
+
+#post-list
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;    
+}
+
+#login-only-options *
+{
+ 
+    padding-left:5px;
+ 
+}
+
+
+article
+{
+    padding-top: 1%;
+    position:relative;
+}
+
+.post-title
+{
+    font-size: xx-large;
+}
+
+.post-modified
+{
+    font-size:small;
+    padding-left:5px;
+}
+
+.post-body
+{
+    font-size: medium;
+   
+}
+
+#edit-form *
+{
+    display:block;
+    padding-top:10px;
+
+}
+
+#edit-form textarea
+{
+
+    width:600px;
+    height:400px;
+
+}
+
+#new-account-form input[type='text'], #new-account-form input[type='password'], #new-account-form select
+{
+
+    display:block;
+
+}
+
+#error-list li
+{
+
+    color:red;
+
+}
+
+#account-list li span
+{
+ 
+    padding-right:5px
+
+}

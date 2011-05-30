@@ -1,6 +1,8 @@
 article
   div.post-title=post.title
-    span.post-modified=post.modified
+    span.post-modified=post.modified.toLocaleDateString()
   div.post-body!= post.body
-  a(href='/edit/'+post._id) Edit
+  div.post-author!=post.author
+  -if(user)
+    a(href='/edit/'+post._id) Edit
 

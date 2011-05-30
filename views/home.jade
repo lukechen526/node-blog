@@ -1,3 +1,12 @@
-h1 Welcome to this blog
+#blog-title Welcome to this blog 
+  span(id='login-only-options', style='font-size: small;')
+    -if(user && user.type === 'user')
+      a(href='/new') Add New Post
+      a(href='/logout') Logout
+    -else if(user && user.type ==='admin')
+      a(href='/newaccount') Create New Account
+      a(href='/logout') Logout
+      a(href='/viewaccounts') View All Accounts
+
 #post-list
   !=partial('partials/post', posts)

@@ -1,0 +1,6 @@
+h1 Account List
+ul#account-list
+  -for(var account in accounts)
+    li
+      span#account-name!= 'Username: '+ accounts[account].username 
+      span#account-name!= 'Email: '+ accounts[account].email

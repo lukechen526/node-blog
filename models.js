@@ -3,8 +3,10 @@ var mongoose = require('mongoose'),
     ObjectId = Schema.ObjectId;
 
 //Define model Post
-var Post = new Schema({
-    _id        : ObjectId
+var Post = new Schema
+({
+    _id       : ObjectId
+  , author    : {type:String, default:'default'} 
   , title     : String
   , body      : String
   , modified  : {type:Date, default: Date.now}
@@ -12,21 +14,15 @@ var Post = new Schema({
 });
 
 
+//Export the Models class, used to access all the other classes defined in this package
 
-
-
-
-
-
-
-function Models(){
+function Models()
+{
 
     //Connection
     mongoose.connect('mongodb://localhost/my_database');
     
-
     //Attach the models to Models
-    //
     this.Post = mongoose.model('Post', Post);
 
 }

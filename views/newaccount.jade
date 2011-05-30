@@ -1,0 +1,20 @@
+form(id='new-account-form',action='', method='post', onSubmit='return checkNewAccountEntry();')
+  label(for='username') Username:
+    input(type='text', name='username', id='username')
+  label(for='password') Password:
+    input(type='password', name='password', id='password')
+  label(for='password_repeat') Repeat the Password:
+    input(type='password', name='password-repeat', id='password-repeat')
+  label(for'type') Account Type:
+    select(name='type')
+      option(value='admin') Administrator
+      option(value='user') Regular User
+  label(for='email') Email:
+    input(type='text', name='email', id='email')
+  input(type='submit', value='Create New Account')
+  input(type='reset', value='Clear')
+
+ul#error-list
+  -for (var err in errors)
+    li!=errors[err]
+
